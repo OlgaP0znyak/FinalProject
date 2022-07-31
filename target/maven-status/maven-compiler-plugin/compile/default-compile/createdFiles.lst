@@ -1,0 +1,11 @@
+com\it_academy\framework\Driver.class
+com\it_academy\framework\FirefoxDriverCreator.class
+com\it_academy\framework\WebDriverCreator.class
+com\it_academy\framework\AbstractPage.class
+com\it_academy\navigation\OnlinerNavigation.class
+com\it_academy\pageobject\OnlinerHomePage.class
+com\it_academy\pageobject\CatalogPage.class
+com\it_academy\framework\WebDriverDiscovery.class
+com\it_academy\framework\ChromeDriverCreator.class
+com\it_academy\pageobject\OnlinerHeader.class
+com\it_academy\pageobject\ProductPage.class
