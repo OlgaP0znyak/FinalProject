@@ -1,4 +1,4 @@
-package com.it_academy.rest_api.test;
+package com.it_academy.rest_api;
 
 import com.it_academy.rest_api.service.SushiveslaService;
 import org.testng.annotations.Test;

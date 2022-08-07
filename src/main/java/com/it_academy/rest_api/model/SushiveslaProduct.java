@@ -6,16 +6,16 @@ import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SushiveslaProduct {
-    private int id;
+    private String id;
     private String key;
     private String name;
     private String full_name;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -48,7 +48,7 @@ public class SushiveslaProduct {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SushiveslaProduct that = (SushiveslaProduct) o;
-        return id == that.id && key.equals(that.key) && name.equals(that.name) && full_name.equals(that.full_name);
+        return Objects.equals(id, that.id) && key.equals(that.key) && name.equals(that.name) && full_name.equals(that.full_name);
     }
 
     @Override
