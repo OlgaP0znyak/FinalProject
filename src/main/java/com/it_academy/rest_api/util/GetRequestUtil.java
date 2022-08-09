@@ -1,4 +1,4 @@
-package com.it_academy.rest_api.utils;
+package com.it_academy.rest_api.util;
 
 import io.restassured.response.ResponseBody;
 import org.apache.commons.collections4.MapUtils;
@@ -8,9 +8,9 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public final class GetRequestUtils {
+public final class GetRequestUtil {
 
-    private GetRequestUtils() {
+    private GetRequestUtil() {
     }
 
     public static ResponseBody makeRequestAndGetResponseBody(String endpoint,

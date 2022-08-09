@@ -9,6 +9,6 @@ public class HomePage extends AbstractPage {
             "//*[contains(@class, 'b-main-navigation__text') and contains(text(), '%s')]";
 
     public void clickOnHomePageLink(String link) {
-        waitForElementVisible(By.xpath(format(NAVIGATION_LINK_PATTERN, link))).click();
+        waitForElementVisibleWithRemote(By.xpath(format(NAVIGATION_LINK_PATTERN, link))).click();
     }
 }

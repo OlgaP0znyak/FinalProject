@@ -7,8 +7,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class WebDriverFactoryStaticThreadRemote {
-    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private static CapabilityFactory capabilityFactory = new CapabilityFactory();
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private static final CapabilityFactory capabilityFactory = new CapabilityFactory();
 
     public static void setDriver(String browser) {
         try {

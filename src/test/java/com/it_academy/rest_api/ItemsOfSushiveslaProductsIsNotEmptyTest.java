@@ -27,6 +27,5 @@ public class ItemsOfSushiveslaProductsIsNotEmptyTest {
                 as("Присутствует пустое поле full_name в продукте сушивесла")
                 .allMatch(sushiveslaProduct -> !sushiveslaProduct.getFull_name().isEmpty());
         softly.assertAll();
-
     }
 }

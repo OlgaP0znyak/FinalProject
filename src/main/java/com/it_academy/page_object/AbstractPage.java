@@ -10,12 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class AbstractPage {
 
-    public WebElement waitForElementVisible(By by) {
+    public WebElement waitForElementVisibleWithRemote(By by) {
         Wait<WebDriver> wait = new WebDriverWait(WebDriverFactoryStaticThreadRemote.getDriver(), 1000);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-    }
-
-    public void navigate(String url) {
-        WebDriverFactoryStaticThreadRemote.getDriver().get(url);
     }
 }

@@ -1,10 +1,10 @@
-package com.it_academy.rest_api.utils;
+package com.it_academy.rest_api.util;
 
 import io.restassured.response.ResponseBody;
 
 import java.util.List;
 
-public final class ResponseBodyUtils {
+public final class ResponseBodyUtil {
 
     public static <T> List<T> getObjectsByJsonPath(
             ResponseBody responseBody, String jsonPath, Class<T> type) {

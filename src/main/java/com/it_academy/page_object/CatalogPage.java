@@ -36,11 +36,11 @@ public class CatalogPage extends AbstractPage {
     }
 
     public void clickOnCatalogPageLink(String link) {
-        waitForElementVisible(By.xpath(String.format(LINK_ITEM_XPATH_PATTERN, link))).click();
+        waitForElementVisibleWithRemote(By.xpath(String.format(LINK_ITEM_XPATH_PATTERN, link))).click();
     }
 
     public void clickOnItemOfComputersAndNets(String link) {
-        waitForElementVisible(By.xpath(String.format(LIST_SUBMENU_ITEMS_OF_COMPUTERS_AND_NETS, link))).click();
+        waitForElementVisibleWithRemote(By.xpath(String.format(LIST_SUBMENU_ITEMS_OF_COMPUTERS_AND_NETS, link))).click();
     }
 
     public List<String> getNamesOfSubmenuItemsOfComputersAndNets() {
@@ -52,7 +52,7 @@ public class CatalogPage extends AbstractPage {
     public List<String> getListOfTextOfElements(String locator) {
         List<WebElement> webElements;
         List<String> textOfWebElements = new ArrayList<>();
-        webElements = waitForElementVisible(By.xpath(locator))
+        webElements = waitForElementVisibleWithRemote(By.xpath(locator))
                 .findElements(By.xpath(locator));
 
         for (WebElement webElement : webElements) {
@@ -71,7 +71,7 @@ public class CatalogPage extends AbstractPage {
         List<String> quantities = new ArrayList<>();
         List<WebElement> webElements;
         List<String> textOfWebElements = new ArrayList<>();
-        webElements = waitForElementVisible(By.xpath(LIST_QUANTITY_AND_PRICE_OF_ELEMENTS_OF_ACCESSORIES))
+        webElements = waitForElementVisibleWithRemote(By.xpath(LIST_QUANTITY_AND_PRICE_OF_ELEMENTS_OF_ACCESSORIES))
                 .findElements(By.xpath(LIST_QUANTITY_AND_PRICE_OF_ELEMENTS_OF_ACCESSORIES));
         webElements.forEach(webElement -> textOfWebElements.add(webElement.getAttribute("innerHTML")));
         textOfWebElements.forEach(textOfWebElement -> quantities.add(textOfWebElement.split("<br>")[0]));
@@ -82,7 +82,7 @@ public class CatalogPage extends AbstractPage {
         List<String> prices = new ArrayList<>();
         List<WebElement> webElements;
         List<String> textOfWebElements = new ArrayList<>();
-        webElements = waitForElementVisible(By.xpath(LIST_QUANTITY_AND_PRICE_OF_ELEMENTS_OF_ACCESSORIES))
+        webElements = waitForElementVisibleWithRemote(By.xpath(LIST_QUANTITY_AND_PRICE_OF_ELEMENTS_OF_ACCESSORIES))
                 .findElements(By.xpath(LIST_QUANTITY_AND_PRICE_OF_ELEMENTS_OF_ACCESSORIES));
         webElements.forEach(webElement -> textOfWebElements.add(webElement.getAttribute("innerHTML")));
         textOfWebElements.forEach(textOfWebElement -> prices.add(textOfWebElement.split("<br>")[1]));

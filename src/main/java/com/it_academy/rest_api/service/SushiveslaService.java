@@ -2,8 +2,8 @@ package com.it_academy.rest_api.service;
 
 import com.it_academy.rest_api.endpoints.OnlinerEndpoints;
 import com.it_academy.rest_api.model.SushiveslaProduct;
-import com.it_academy.rest_api.utils.GetRequestUtils;
-import com.it_academy.rest_api.utils.ResponseBodyUtils;
+import com.it_academy.rest_api.util.GetRequestUtil;
+import com.it_academy.rest_api.util.ResponseBodyUtil;
 import io.restassured.response.ResponseBody;
 
 import java.util.List;
@@ -14,18 +14,18 @@ public class SushiveslaService {
 
     public List<SushiveslaProduct> getListSushiveslaProducts() {
         ResponseBody responseBody;
-        responseBody = GetRequestUtils.makeRequestAndGetResponseBody(
+        responseBody = GetRequestUtil.makeRequestAndGetResponseBody(
                 OnlinerEndpoints.getCatalogSushiveslaEndPoint(),
                 null, null);
-        return ResponseBodyUtils.getObjectsByJsonPath(
+        return ResponseBodyUtil.getObjectsByJsonPath(
                 responseBody, SUSHIVESLA_PRODUCTS_JSON_PATH, SushiveslaProduct.class);
     }
 
     public List<String> getListSushiveslaProductsName_prefix() {
-        ResponseBody responseBody = GetRequestUtils.makeRequestAndGetResponseBody(
+        ResponseBody responseBody = GetRequestUtil.makeRequestAndGetResponseBody(
                 OnlinerEndpoints.getCatalogSushiveslaRollsEndPoint(),
                 null, null);
-        return ResponseBodyUtils.getListStringByJsonPath(
+        return ResponseBodyUtil.getListStringByJsonPath(
                 responseBody, SUSHIVESLA_PRODUCTS_NAME_PREFIX_JSON_PATH);
     }
 }

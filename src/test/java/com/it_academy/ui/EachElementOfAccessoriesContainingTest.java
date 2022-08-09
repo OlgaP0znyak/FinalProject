@@ -3,12 +3,10 @@ package com.it_academy.ui;
 import com.it_academy.driver.WebDriverFactoryStaticThreadRemote;
 import com.it_academy.page_object.CatalogPage;
 import com.it_academy.page_object.HomePage;
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +50,6 @@ public class EachElementOfAccessoriesContainingTest {
                 .doesNotContain("")
                 .doesNotContainNull();
     }
-
 
     @AfterClass
     public void tearDown() {
