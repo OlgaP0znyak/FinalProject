@@ -1,0 +1,6 @@
+com\it_academy\framework\PropertiesReader.class
+com\it_academy\rest_api\utils\GetRequestUtils.class
+com\it_academy\rest_api\model\SushiveslaProduct.class
+com\it_academy\rest_api\service\SushiveslaService.class
+com\it_academy\rest_api\endpoints\OnlinerEndpoints.class
+com\it_academy\rest_api\utils\ResponseBodyUtils.class

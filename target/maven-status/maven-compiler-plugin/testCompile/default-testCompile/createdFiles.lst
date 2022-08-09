@@ -1,0 +1,12 @@
+com\it_academy\driver\OptionsManager.class
+com\it_academy\ui\EachElementOfAccessoriesContainingTest.class
+com\it_academy\ui\ListItemsOfComputersAndNetsExistingTest.class
+com\it_academy\page_object\HomePage.class
+com\it_academy\driver\WebDriverFactoryStaticThreadLocal.class
+com\it_academy\driver\CapabilityFactory.class
+com\it_academy\ui\MainMenuItemsExistingTest.class
+com\it_academy\page_object\AbstractPage.class
+com\it_academy\rest_api\Name_prefixOfSushiveslaProductsIsContainSelectedFilterTest.class
+com\it_academy\rest_api\ItemsOfSushiveslaProductsIsNotEmptyTest.class
+com\it_academy\driver\WebDriverFactoryStaticThreadRemote.class
+com\it_academy\page_object\CatalogPage.class
