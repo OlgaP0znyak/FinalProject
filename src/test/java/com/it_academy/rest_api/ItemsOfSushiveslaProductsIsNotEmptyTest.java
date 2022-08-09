@@ -2,6 +2,7 @@ package com.it_academy.rest_api;
 
 import com.it_academy.rest_api.model.SushiveslaProduct;
 import com.it_academy.rest_api.service.SushiveslaService;
+import io.qameta.allure.Description;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -11,7 +12,8 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ItemsOfSushiveslaProductsIsNotEmptyTest {
-    @Test
+
+        @Test
     public void testItemsOfSushiveslaProductsIsNotEmpty() {
         List<SushiveslaProduct> sushiveslaProducts = new SushiveslaService().getListSushiveslaProducts();
 

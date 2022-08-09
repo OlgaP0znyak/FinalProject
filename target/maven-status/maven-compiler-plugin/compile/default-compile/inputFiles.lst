@@ -1,11 +1,6 @@
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\framework\Driver.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\pageobject\CatalogPage.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\navigation\OnlinerNavigation.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\framework\ChromeDriverCreator.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\framework\WebDriverCreator.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\framework\WebDriverDiscovery.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\framework\AbstractPage.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\framework\FirefoxDriverCreator.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\pageobject\OnlinerHomePage.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\pageobject\ProductPage.java
-C:\OnDiskD\Test Automation courses\HomeTask5 - results\RestAPIExample\src\main\java\com\it_academy\pageobject\OnlinerHeader.java
+C:\Users\olapo\IdeaProjects\RestApiProject\src\main\java\com\it_academy\rest_api\utils\ResponseBodyUtils.java
+C:\Users\olapo\IdeaProjects\RestApiProject\src\main\java\com\it_academy\rest_api\service\SushiveslaService.java
+C:\Users\olapo\IdeaProjects\RestApiProject\src\main\java\com\it_academy\framework\PropertiesReader.java
+C:\Users\olapo\IdeaProjects\RestApiProject\src\main\java\com\it_academy\rest_api\utils\GetRequestUtils.java
+C:\Users\olapo\IdeaProjects\RestApiProject\src\main\java\com\it_academy\rest_api\endpoints\OnlinerEndpoints.java
+C:\Users\olapo\IdeaProjects\RestApiProject\src\main\java\com\it_academy\rest_api\model\SushiveslaProduct.java
