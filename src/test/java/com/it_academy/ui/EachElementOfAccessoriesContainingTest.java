@@ -3,6 +3,7 @@ package com.it_academy.ui;
 import com.it_academy.driver.WebDriverFactoryStaticThreadRemote;
 import com.it_academy.page_object.CatalogPage;
 import com.it_academy.page_object.HomePage;
+import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -10,8 +11,6 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class EachElementOfAccessoriesContainingTest {
     private final HomePage homePage = new HomePage();
@@ -37,18 +36,23 @@ public class EachElementOfAccessoriesContainingTest {
         List<String> quantities = catalogPage.getQuantityOfElementsOfAccessories();
         List<String> prices = catalogPage.getPricesOfElementsOfAccessories();
 
-        assertThat(titlesOfElementsOfAccessories)
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(titlesOfElementsOfAccessories)
                 .as("В списке комплектующих не все элементы содержат название")
+                .isNotEmpty()
                 .doesNotContain("")
                 .doesNotContainNull();
-        assertThat(quantities)
+        softly.assertThat(quantities)
                 .as("В списке комплектующих не все элементы содержат количество")
+                .isNotEmpty()
                 .doesNotContain("")
                 .doesNotContainNull();
-        assertThat(prices)
+        softly.assertThat(prices)
                 .as("В списке комплектующих не все элементы содержат цену")
+                .isNotEmpty()
                 .doesNotContain("")
                 .doesNotContainNull();
+        softly.assertAll();
     }
 
     @AfterClass
