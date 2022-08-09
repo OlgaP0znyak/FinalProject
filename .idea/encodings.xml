@@ -7,13 +7,11 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/it_academy/driver/WebDriverFactoryStaticThreadLocal.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/it_academy/driver/WebDriverFactoryStaticThreadRemote.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/it_academy/page_object/AbstractPage.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/it_academy/page_object/AbstractPage.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/it_academy/page_object/CatalogPage.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/it_academy/page_object/HomePage.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/it_academy/page_object/HomePage.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/com/it_academy/rest_api/Name_prefixOfSushiveslaProductsIsContainSelectedFilterTest.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/test/java/com/it_academy/ui/EachElementOfAccessoriesContainingTest.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/it_academy/ui/EachElementOfAccessoriesContainingTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/com/it_academy/ui/ListItemsOfComputersAndNetsExistingTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/com/it_academy/ui/MainMenuItemsExistingTest.java" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />

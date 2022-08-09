@@ -32,23 +32,23 @@ public class EachElementOfAccessoriesContainingTest {
 
     @Test
     public void testAccessoriesContainElements() {
-        homePage.clickOnHomePageLink("Каталог");
-        catalogPage.clickOnCatalogPageLink("Компьютеры");
-        catalogPage.clickOnItemOfComputersAndNets("Комплектующие");
+        homePage.clickOnHomePageLink("РљР°С‚Р°Р»РѕРі");
+        catalogPage.clickOnCatalogPageLink("РљРѕРјРїСЊСЋС‚РµСЂС‹");
+        catalogPage.clickOnItemOfComputersAndNets("РљРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ");
         titlesOfElementsOfAccessories = catalogPage.getTitlesOfElementsOfAccessories();
         List<String> quantities = catalogPage.getQuantityOfElementsOfAccessories();
         List<String> prices = catalogPage.getPricesOfElementsOfAccessories();
 
         assertThat(titlesOfElementsOfAccessories)
-                .as("В списке комплектующих не все элементы содержат название")
+                .as("Р’ СЃРїРёСЃРєРµ РєРѕРјРїР»РµРєС‚СѓСЋС‰РёС… РЅРµ РІСЃРµ СЌР»РµРјРµРЅС‚С‹ СЃРѕРґРµСЂР¶Р°С‚ РЅР°Р·РІР°РЅРёРµ")
                 .doesNotContain("")
                 .doesNotContainNull();
         assertThat(quantities)
-                .as("В списке комплектующих не все элементы содержат количество")
+                .as("Р’ СЃРїРёСЃРєРµ РєРѕРјРїР»РµРєС‚СѓСЋС‰РёС… РЅРµ РІСЃРµ СЌР»РµРјРµРЅС‚С‹ СЃРѕРґРµСЂР¶Р°С‚ РєРѕР»РёС‡РµСЃС‚РІРѕ")
                 .doesNotContain("")
                 .doesNotContainNull();
         assertThat(prices)
-                .as("В списке комплектующих не все элементы содержат цену")
+                .as("Р’ СЃРїРёСЃРєРµ РєРѕРјРїР»РµРєС‚СѓСЋС‰РёС… РЅРµ РІСЃРµ СЌР»РµРјРµРЅС‚С‹ СЃРѕРґРµСЂР¶Р°С‚ С†РµРЅСѓ")
                 .doesNotContain("")
                 .doesNotContainNull();
     }
