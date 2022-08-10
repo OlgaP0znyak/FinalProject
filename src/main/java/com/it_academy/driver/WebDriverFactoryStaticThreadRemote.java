@@ -12,7 +12,7 @@ public class WebDriverFactoryStaticThreadRemote {
 
     public static void setDriver(String browser) {
         try {
-            driver.set(new RemoteWebDriver(new URL("http://172.20.10.3:4444"),
+            driver.set(new RemoteWebDriver(new URL("http://192.168.8.101:4444"),
                     capabilityFactory.getCapabilities(browser)));
         } catch (MalformedURLException e) {
             System.out.println("Cannot create connection with remote server");
