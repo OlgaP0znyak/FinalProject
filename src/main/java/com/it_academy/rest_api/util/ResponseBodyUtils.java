@@ -4,7 +4,7 @@ import io.restassured.response.ResponseBody;
 
 import java.util.List;
 
-public final class ResponseBodyUtil {
+public final class ResponseBodyUtils {
 
     public static <T> List<T> getObjectsByJsonPath(
             ResponseBody responseBody, String jsonPath, Class<T> type) {

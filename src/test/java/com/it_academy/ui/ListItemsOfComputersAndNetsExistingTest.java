@@ -3,6 +3,8 @@ package com.it_academy.ui;
 import com.it_academy.driver.WebDriverFactoryStaticThreadRemote;
 import com.it_academy.page_object.CatalogPage;
 import com.it_academy.page_object.HomePage;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -21,6 +23,7 @@ public class ListItemsOfComputersAndNetsExistingTest {
     private final List<String> expectedNamesOfListItemsOfComputersAndNets = Arrays.asList(
             "Ноутбуки, компьютеры, мониторы", "Комплектующие", "Хранение данных", "Сетевое оборудование");
 
+    @Step("Засетать драйвер и перейти на сайт onliner.by")
     @BeforeClass
     @Parameters(value = {"browser"})
     public void setUp(String browser) {
@@ -31,6 +34,8 @@ public class ListItemsOfComputersAndNetsExistingTest {
                 .get("https://www.onliner.by/");
     }
 
+    @Description("Проверить, что в разделе \"Каталог, Компьютеры и сети\" пункты подменю содержат" +
+            "разделы \"Ноутбуки, компьютеры, мониторы\", \"Комплектующие\", \"Хранение данных\", \"Сетевое оборудование\"")
     @Test
     public void testIsExistNamesOfLinkItemOnCatalogPage() {
         homePage.clickOnHomePageLink("Каталог");
@@ -43,6 +48,7 @@ public class ListItemsOfComputersAndNetsExistingTest {
 
     }
 
+    @Step("Закрыть драйвер")
     @AfterClass
     public void tearDown() {
         WebDriverFactoryStaticThreadRemote.closeDriver();

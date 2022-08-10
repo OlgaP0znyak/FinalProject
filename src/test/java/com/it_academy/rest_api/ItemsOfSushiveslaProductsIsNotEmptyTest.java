@@ -2,14 +2,15 @@ package com.it_academy.rest_api;
 
 import com.it_academy.rest_api.model.SushiveslaProduct;
 import com.it_academy.rest_api.service.SushiveslaService;
+import io.qameta.allure.Description;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
 public class ItemsOfSushiveslaProductsIsNotEmptyTest {
-
-        @Test
+    @Description("Проверить, что каждый продукт сушивесла содержит не пустой id, key, name и full_name")
+    @Test
     public void testItemsOfSushiveslaProductsIsNotEmpty() {
         List<SushiveslaProduct> sushiveslaProducts = new SushiveslaService().getListSushiveslaProducts();
 

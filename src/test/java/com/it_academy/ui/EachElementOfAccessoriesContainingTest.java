@@ -3,6 +3,8 @@ package com.it_academy.ui;
 import com.it_academy.driver.WebDriverFactoryStaticThreadRemote;
 import com.it_academy.page_object.CatalogPage;
 import com.it_academy.page_object.HomePage;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -17,6 +19,7 @@ public class EachElementOfAccessoriesContainingTest {
     private final CatalogPage catalogPage = new CatalogPage();
     List<String> titlesOfElementsOfAccessories = new ArrayList<>();
 
+    @Step("Засетать драйвер и перейти на сайт onliner.by")
     @BeforeClass
     @Parameters(value = {"browser"})
     public void setUp(String browser) {
@@ -27,6 +30,8 @@ public class EachElementOfAccessoriesContainingTest {
                 .get("https://www.onliner.by/");
     }
 
+    @Description("Проверить, что в разделе \"Каталог, Компьютеры и сети, Комплектующие\" " +
+            "все элементы содержат название, количество и цену")
     @Test
     public void testAccessoriesContainElements() {
         homePage.clickOnHomePageLink("Каталог");
@@ -55,6 +60,7 @@ public class EachElementOfAccessoriesContainingTest {
         softly.assertAll();
     }
 
+    @Step("Закрыть драйвер")
     @AfterClass
     public void tearDown() {
         WebDriverFactoryStaticThreadRemote.closeDriver();

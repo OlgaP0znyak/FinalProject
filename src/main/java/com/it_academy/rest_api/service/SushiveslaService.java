@@ -3,7 +3,7 @@ package com.it_academy.rest_api.service;
 import com.it_academy.rest_api.endpoints.OnlinerEndpoints;
 import com.it_academy.rest_api.model.SushiveslaProduct;
 import com.it_academy.rest_api.util.GetRequestUtil;
-import com.it_academy.rest_api.util.ResponseBodyUtil;
+import com.it_academy.rest_api.util.ResponseBodyUtils;
 import io.restassured.response.ResponseBody;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class SushiveslaService {
         responseBody = GetRequestUtil.makeRequestAndGetResponseBody(
                 OnlinerEndpoints.getCatalogSushiveslaEndPoint(),
                 null, null);
-        return ResponseBodyUtil.getObjectsByJsonPath(
+        return ResponseBodyUtils.getObjectsByJsonPath(
                 responseBody, SUSHIVESLA_PRODUCTS_JSON_PATH, SushiveslaProduct.class);
     }
 
@@ -25,7 +25,7 @@ public class SushiveslaService {
         ResponseBody responseBody = GetRequestUtil.makeRequestAndGetResponseBody(
                 OnlinerEndpoints.getCatalogSushiveslaRollsEndPoint(),
                 null, null);
-        return ResponseBodyUtil.getListStringByJsonPath(
+        return ResponseBodyUtils.getListStringByJsonPath(
                 responseBody, SUSHIVESLA_PRODUCTS_NAME_PREFIX_JSON_PATH);
     }
 }

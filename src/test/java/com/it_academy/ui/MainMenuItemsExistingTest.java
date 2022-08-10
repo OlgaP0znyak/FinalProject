@@ -3,6 +3,8 @@ package com.it_academy.ui;
 import com.it_academy.driver.WebDriverFactoryStaticThreadRemote;
 import com.it_academy.page_object.CatalogPage;
 import com.it_academy.page_object.HomePage;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -20,6 +22,7 @@ public class MainMenuItemsExistingTest {
             "Электроника", "Компьютеры и сети", "Бытовая техника", "Стройка и ремонт", "Дом и сад",
             "Авто и мото", "Красота и спорт", "Детям и мамам", "Работа и офис");
 
+    @Step("Засетать драйвер и перейти на сайт onliner.by")
     @BeforeClass
     @Parameters(value = {"browser"})
     public void setUp(String browser) {
@@ -30,6 +33,9 @@ public class MainMenuItemsExistingTest {
                 .get("https://www.onliner.by/");
     }
 
+    @Description("Проверить, что названия пункты меню имеют названия " +
+            "\"Электроника\", \"Компьютеры и сети\", \"Бытовая техника\", \"Стройка и ремонт\", " +
+            "\"Дом и сад\", \"Авто и мото\", \"Красота и спорт\", \"Детям и мамам\", \"Работа и офис\"")
     @Test
     public void testIsExistNamesOfLinkItemOnCatalogPage() {
         homePage.clickOnHomePageLink("Каталог");
@@ -40,6 +46,7 @@ public class MainMenuItemsExistingTest {
                 .containsAll(expectedNamesOfLinkItem);
     }
 
+    @Step("Закрыть драйвер")
     @AfterClass
     public void tearDown() {
         WebDriverFactoryStaticThreadRemote.closeDriver();
